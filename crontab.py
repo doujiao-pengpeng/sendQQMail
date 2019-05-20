@@ -39,7 +39,7 @@ def send_email():
 def exec_scheduler():
     # BlockingScheduler
     sched = BlockingScheduler()
-    sched.add_job(send_email, 'cron', minute=30)  # 每分钟发一次
+    # sched.add_job(send_email, 'cron', minute=30)  # 每小时的第30分发一次
     # sched.add_job(send_email, 'cron', hour=8)  # 每天早上8点发一次
     sched.start()
 

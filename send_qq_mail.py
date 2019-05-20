@@ -12,8 +12,8 @@ SERVER = {
 }
 
 USER = {
-    "email": "1129103770@qq.com",  # 邮箱登录账号
-    "password": "okdftbfmihrxiajc"  # 发送人邮箱的授权码
+    "email": "********@qq.com",  # 邮箱登录账号
+    "password": "********"  # 发送人邮箱的授权码
 }
 
 
@@ -44,11 +44,9 @@ class PersonMail(object):
 
 if __name__ == '__main__':
     def test():
-        receivers = ["1129103770@qq.com"]
-        # receivers = ["981827572@qq.com", "1129103770@qq.com"]
-
+        receivers = ["********@qq.com"]
         pengpeng_email = PersonMail(receivers)
-        pengpeng_email.write_msg("来自鹏鹏的邮件", "我们已经在一起22天了，小兴奋")
+        pengpeng_email.write_msg("*****subject", "这是单纯地测试发送")
         result = pengpeng_email.send_email()
         print(result)
 
